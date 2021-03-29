@@ -9,7 +9,7 @@ S3method(plot, MultOrdRS)
 S3method(print, MultOrdRS)
 
 importFrom("grDevices", "grey")
-  importFrom("graphics", "abline", "points", "polygon", "text")
+  importFrom("graphics", "abline", "points", "polygon", "text", "plot")
   importFrom("stats", "dnorm", "model.frame", "model.matrix",
              "model.response", "nlminb", "optim", "optimHess", "pnorm",
              "printCoefmat", "qnorm")

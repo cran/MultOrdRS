@@ -7,8 +7,13 @@
 #include <vector>
 #include <algorithm>
 #include <assert.h>
-#include <omp.h>
 #include <iostream>
+
+
+#ifdef _OPENMP
+#include <omp.h>
+#endif
+
 
 using namespace Rcpp;
 using namespace arma;

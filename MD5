@@ -1,5 +1,5 @@
-f6d6cfe24217dd40548223c202503f80 *DESCRIPTION
-c2c0dfdd8a315955b11798b6ac4821cf *NAMESPACE
+bbae481a4ee2d73b69639fdfcad88195 *DESCRIPTION
+67f251070cf8ad8376c9861adb36efb2 *NAMESPACE
 6dd3d2c30de35f8644ff81d51989a515 *R/MultOrdRS-package.R
 e2344bab8419777dda66673f4294ad58 *R/MultOrdRS.R
 26719c6d2779276ea9dbec70731ac7b6 *R/RcppExports.R
@@ -7,7 +7,7 @@ fe48e3c597629b0c3e62fddcad295bab *R/estimate.acat.R
 714e5904b6d30a81a9c09470982501b9 *R/estimate.cumul.R
 a4d971a6f76be018b5fb522b21c59b54 *R/plot.multordRS.R
 93067f152b7c305153f11ad24d67e29e *R/print.multordRS.R
-3992ddd7dbf56690620ee4150ffe8821 *build/partial.rdb
+f3926c9fe96215863f9a96aa6bbe71bf *build/partial.rdb
 ee5c400a32aa3be944feb6dcf7af2857 *data/GLES17.RData
 ea4a79975a4c297948fd1c7d38849997 *data/tenseness.RData
 55589d2c3b9d6ba5951704f1a9dcba57 *man/GLES17.Rd
@@ -19,5 +19,5 @@ ea4a79975a4c297948fd1c7d38849997 *data/tenseness.RData
 49c5d4d01f75330f7e9f41595e7f5d06 *src/Makevars
 f6e5726bd79222f8b725505026d5e226 *src/Makevars.win
 da70e3cf2a2d9c479403bc153c684c72 *src/RcppExports.cpp
-9ed1ffd59de0f113105cdcc477af3733 *src/cppMultOrd.cpp
+82d34ea6965986f6b4c0aa233446a49f *src/cppMultOrd.cpp
 7c22b1b500cab25872924e218f1645f5 *src/registerDynamicSymbol.c
