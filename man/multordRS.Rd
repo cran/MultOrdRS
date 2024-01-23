@@ -169,7 +169,7 @@ plot(m.GLES2, main = "Cumulative model")
 }
 \references{
 Schauberger, Gunther and Tutz, Gerhard (2021): Multivariate Ordinal Random Effects Models Including Subject and Group Specific Response Style Effects, 
-\emph{Statistical Modelling}, \url{https://journals.sagepub.com/doi/10.1177/1471082X20978034}
+\emph{Statistical Modelling}, \doi{10.1177/1471082X20978034}
 }
 \seealso{
 \code{\link{ctrl.multordRS}} \code{\link{MultOrdRS-package}} \code{\link{plot.MultOrdRS}}

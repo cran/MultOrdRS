@@ -3,18 +3,24 @@
 #' Plot function for a \code{MultOrdRS} object. Plots show coefficients of the explanatory variables, both with repect to location and response styles.
 #' The coefficient pairs are displayed as stars, where the rays represent (1-alpha) confidence intervals.
 #' 
-#' @usage \method{plot}{MultOrdRS}(x, alpha = 0.05, CIfactor = 0.9, \dots)
+#' @usage \method{plot}{MultOrdRS}(x, alpha = 0.05, CIfactor = 0.9, 
+#' xlab = expression(exp(gamma)), ylab = expression(exp(alpha)), 
+#' xlim = range(c(1,betaX.KI)), ylim = range(c(1,betaXRS.KI)), \dots)
 #' @param x \code{MultOrdRS} object
 #' @param alpha Specifies the confidence level 1-alpha of the confidence interval. 
 #' @param CIfactor Argument that helps to control the appearance (the width) of the stars that represent the confidence intervals of both 
 #' parameters (location and response style) corresponding to one covariate.
+#' @param xlab Label for x-axis
+#' @param ylab Label for y-axis
+#' @param xlim Limits for x-axis
+#' @param ylim Limits for y-axis
 #' @param ... Further plot arguments.
 #' @return No return value, called for side effects
 #' @author Gunther Schauberger\cr \email{gunther.schauberger@@tum.de}\cr
 #' \url{https://orcid.org/0000-0002-0392-1580}
 #' @seealso \code{\link{multordRS}}, \code{\link{ctrl.multordRS}}
 #' @references Schauberger, Gunther and Tutz, Gerhard (2021): Multivariate Ordinal Random Effects Models Including Subject and Group Specific Response Style Effects, 
-#' \emph{Statistical Modelling}, \url{https://journals.sagepub.com/doi/10.1177/1471082X20978034}
+#' \emph{Statistical Modelling}, \doi{10.1177/1471082X20978034}
 #' @examples
 #' \donttest{
 #' data(tenseness)
@@ -132,7 +138,11 @@
 #' plot(m.GLES2, main = "Cumulative model")
 #' 
 #'}
-plot.MultOrdRS <- function(x, alpha = 0.05, CIfactor = 0.9, ...){
+plot.MultOrdRS <- function(x, alpha = 0.05, CIfactor = 0.9, 
+                           xlab = expression(exp(gamma)), 
+                           ylab = expression(exp(alpha)), 
+                           xlim = range(c(1,betaX.KI)),
+                           ylim = range(c(1,betaXRS.KI)), ...){
   
   quant <- qnorm(1-alpha/2)
   
@@ -148,11 +158,22 @@ plot.MultOrdRS <- function(x, alpha = 0.05, CIfactor = 0.9, ...){
   betaXRS <- x$beta.XRS
   betaXRS.KI <- exp(cbind(betaXRS-quant*x$se.XRS,betaXRS+quant*x$se.XRS))
   betaXRS <- exp(betaXRS)
-  
-  
-  
-  plot(betaX,betaXRS,pch=16,xlim=range(c(1,betaX.KI)),ylim=range(c(1,betaXRS.KI)),
-       xlab=expression(exp(gamma)),ylab=expression(exp(alpha)), ...)
+# 
+#   if(!exists("xlim")){
+#     xlim <- range(c(1,betaX.KI))
+#   }  
+#   if(!exists("ylim")){
+#     ylim <- range(c(1,betaXRS.KI))
+#   }
+#   if(!exists("ylab")){
+#     ylab <- expression(exp(alpha))
+#   }
+#   if(!exists("xlab")){
+#     xlab <- expression(exp(gamma))
+#   }
+#   
+  plot(betaX,betaXRS,pch=16,xlim=xlim,ylim=ylim,
+       xlab=xlab,ylab=ylab, ...)
   
   p.X <- length(betaX)
   

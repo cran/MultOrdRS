@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // scoreMO
 arma::vec scoreMO(arma::vec alpha, arma::vec Y, arma::mat X, int Q, int q, int n, int I, int pall, int pX, int pXRS, int pthresh, int pshift, int prnd, arma::mat GHweights, arma::vec GHnodes, int scaled, arma::mat dthresh, double cores, double lambda);
 RcppExport SEXP _MultOrdRS_scoreMO(SEXP alphaSEXP, SEXP YSEXP, SEXP XSEXP, SEXP QSEXP, SEXP qSEXP, SEXP nSEXP, SEXP ISEXP, SEXP pallSEXP, SEXP pXSEXP, SEXP pXRSSEXP, SEXP pthreshSEXP, SEXP pshiftSEXP, SEXP prndSEXP, SEXP GHweightsSEXP, SEXP GHnodesSEXP, SEXP scaledSEXP, SEXP dthreshSEXP, SEXP coresSEXP, SEXP lambdaSEXP) {

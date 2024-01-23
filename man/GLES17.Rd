@@ -22,7 +22,7 @@ The data contain socio-demographic information about the participants as well as
 }
 }
 \source{
-\url{https://gles-en.eu/} and 
+\url{https://www.gesis.org/en/gles/about-gles} and 
 \doi{10.4232/1.12927}
 }
 \description{
@@ -83,6 +83,6 @@ Rossteutscher, S., Schmitt-Beck, R., Schoen, H., Wessels, B., Wolf, C., Bieber, 
 Pre-election cross section (GLES 2017). \emph{GESIS Data Archive, Cologne, ZA6800 Data file Version 2.0.0.}, \doi{10.4232/1.12927}.
 
 Schauberger, Gunther and Tutz, Gerhard (2021): Multivariate Ordinal Random Effects Models Including Subject and Group Specific Response Style Effects, 
-\emph{Statistical Modelling}, \url{https://journals.sagepub.com/doi/10.1177/1471082X20978034}
+\emph{Statistical Modelling}, \doi{10.1177/1471082X20978034}
 }
 \keyword{datasets}

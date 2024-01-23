@@ -4,7 +4,9 @@
 \alias{plot.MultOrdRS}
 \title{Plot function for MultOrdRS}
 \usage{
-\method{plot}{MultOrdRS}(x, alpha = 0.05, CIfactor = 0.9, \dots)
+\method{plot}{MultOrdRS}(x, alpha = 0.05, CIfactor = 0.9, 
+xlab = expression(exp(gamma)), ylab = expression(exp(alpha)), 
+xlim = range(c(1,betaX.KI)), ylim = range(c(1,betaXRS.KI)), \dots)
 }
 \arguments{
 \item{x}{\code{MultOrdRS} object}
@@ -13,6 +15,14 @@
 
 \item{CIfactor}{Argument that helps to control the appearance (the width) of the stars that represent the confidence intervals of both 
 parameters (location and response style) corresponding to one covariate.}
+
+\item{xlab}{Label for x-axis}
+
+\item{ylab}{Label for y-axis}
+
+\item{xlim}{Limits for x-axis}
+
+\item{ylim}{Limits for y-axis}
 
 \item{...}{Further plot arguments.}
 }
@@ -143,7 +153,7 @@ plot(m.GLES2, main = "Cumulative model")
 }
 \references{
 Schauberger, Gunther and Tutz, Gerhard (2021): Multivariate Ordinal Random Effects Models Including Subject and Group Specific Response Style Effects, 
-\emph{Statistical Modelling}, \url{https://journals.sagepub.com/doi/10.1177/1471082X20978034}
+\emph{Statistical Modelling}, \doi{10.1177/1471082X20978034}
 }
 \seealso{
 \code{\link{multordRS}}, \code{\link{ctrl.multordRS}}

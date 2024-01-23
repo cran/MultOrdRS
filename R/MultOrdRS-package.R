@@ -13,7 +13,7 @@
 #' @seealso \code{\link{multordRS}}  \code{\link{ctrl.multordRS}}  \code{\link{plot.MultOrdRS}}
 #' @keywords multivariate ordinal response style adjacent categories cumulative 
 #' @references Schauberger, Gunther and Tutz, Gerhard (2021): Multivariate Ordinal Random Effects Models Including Subject and Group Specific Response Style Effects, 
-#' \emph{Statistical Modelling}, \url{https://journals.sagepub.com/doi/10.1177/1471082X20978034}
+#' \emph{Statistical Modelling}, \doi{10.1177/1471082X20978034}
 #' @examples
 #' data(tenseness)
 #' 
@@ -273,9 +273,9 @@ NULL
 #' Pre-election cross section (GLES 2017). \emph{GESIS Data Archive, Cologne, ZA6800 Data file Version 2.0.0.}, \doi{10.4232/1.12927}.
 #' 
 #' Schauberger, Gunther and Tutz, Gerhard (2021): Multivariate Ordinal Random Effects Models Including Subject and Group Specific Response Style Effects, 
-#' \emph{Statistical Modelling}, \url{https://journals.sagepub.com/doi/10.1177/1471082X20978034}
+#' \emph{Statistical Modelling}, \doi{10.1177/1471082X20978034}
 #' @source
-#' \url{https://gles-en.eu/} and 
+#' \url{https://www.gesis.org/en/gles/about-gles} and 
 #' \doi{10.4232/1.12927}
 #' @keywords datasets
 #' @examples

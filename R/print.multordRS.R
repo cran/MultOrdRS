@@ -8,7 +8,7 @@ print.MultOrdRS <- function(x, ...){
   cat("Call:\n")
   
   print(x$call,...)
-  
+
   
   p.rnd <- x$design.values$p.rnd
   p.thresh <- x$design.values$p.thresh + x$design.values$p.shift
@@ -42,7 +42,7 @@ print.MultOrdRS <- function(x, ...){
   cat("\n")
   
   if(p.X>0){
-    coef.X <- coef.mat[(p.thresh+1):(p.thresh+p.X),]
+    coef.X <- coef.mat[(p.thresh+1):(p.thresh+p.X),,drop = FALSE]
     
     cat("Location effects:\n")
     printCoefmat(coef.X, ...)
@@ -51,7 +51,7 @@ print.MultOrdRS <- function(x, ...){
   }
   
   if(p.XRS>0){
-    coef.XRS <- coef.mat[(p.thresh+p.X+1):(p.thresh+p.X+p.XRS),]
+    coef.XRS <- coef.mat[(p.thresh+p.X+1):(p.thresh+p.X+p.XRS),,drop = FALSE]
   
   cat("Response style effects:\n")
   printCoefmat(coef.XRS, ...)
